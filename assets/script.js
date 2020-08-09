@@ -1,5 +1,4 @@
 $(function () {
-
     //search button on click function
     $("button").on("click", function () {
         //prevent page refresh
@@ -25,6 +24,14 @@ $(function () {
             // console.log/////////////////////////////////////////////////
             // console.log(response);
 
+            //City
+            let currentCity = response.name;
+            //temperature converted to fahrenheit
+            let tempF = Math.floor(response.main.temp - 273.15) * 1.80 + 32;
+
+            //display results
+            $("#current-city").text(currentCity);
+            $("#current-temp").text(tempF + "F");
         });
     });
 
