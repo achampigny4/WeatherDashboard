@@ -17,8 +17,7 @@ $(function () {
 
         //store city API URL for weather
         let cityURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9a59b92bab7df562dc4f082669ec387d`
-        // console.log(cityURL); ///////////////////////////////////////////////
-
+       
         // GET request to cityURL
         $.get(cityURL).then(function (response) {
 
@@ -71,8 +70,9 @@ $(function () {
     // Display Buttons of past cities searched when the page loads
     // createCityButton();
 
+    // 1    //local storage save multiple cities searched
     // 2    //on click city is added to url to use api for displaying 5 day forecast
-    // 3    //on click city is dynamically made into a button below search
+    // 3    //on click city searched is displayed in the dynamically created button
     // 4    //on click previous searched city buttons display current weather and 5 day forecast  
 
     // end code
